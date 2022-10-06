@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect } from "react";
+import AOS from "aos";
+import Home from "./pages/Home";
+import "./App.css";
+import "./css/style.scss";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      disable: "phone",
+      duration: 750,
+      easing: "ease-out-quart",
+    });
+  });
+
+  useEffect(() => {
+    document.querySelector("html").style.scrollBehavior = "auto";
+    window.scroll({ top: 0 });
+  }, []); // triggered on route change
+
+  return <Home />;
 }
 
 export default App;
