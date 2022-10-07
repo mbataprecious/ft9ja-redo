@@ -27,15 +27,17 @@ function HeroHome() {
   }, [bgIndx]);
 
   return (
-    <section
-      style={{
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        transition: "all 500ms ease-in 0s",
-        backgroundImage: `url(${bgArray[bgIndx]})`,
-      }}
-    >
+    <section className="relative">
+      <div
+        style={{
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+          transition: "all 500ms ease-in 0s",
+          backgroundImage: `url(${bgArray[bgIndx]})`,
+        }}
+        className="absolute top-0 left-0 right-0 bottom-0"
+      ></div>
       <Container>
         <div className="pt-[12rem] pb-10 md:pt-[14rem] md:pb-16">
           {/* Hero content */}

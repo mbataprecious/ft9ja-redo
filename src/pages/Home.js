@@ -3,6 +3,7 @@ import FeaturesStrip from "../partials/FeaturesStrip";
 
 import Header from "../partials/Header";
 import HeroHome from "../partials/HeroHome";
+import TradeSucessSection from "../partials/TradeSucessSection";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
 
       <HeroHome />
       <FeaturesStrip />
+      <TradeSucessSection />
     </div>
   );
 }
