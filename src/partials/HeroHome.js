@@ -6,12 +6,6 @@ import hero3 from "../assests/images/hero3.png";
 
 const bgArray = [hero1, hero2, hero3];
 
-// background-size: cover;
-// background-repeat: no-repeat;
-// background-position: center center;
-// transition: all 500ms ease-in 0s;
-// background-image: url(assets/images/startup/02.png);
-
 function HeroHome() {
   const [bgIndx, setBgIndx] = useState(0);
 
