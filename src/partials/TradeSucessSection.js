@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../components/Container";
 import img1 from "../assests/images/img1.jpg";
 import { Link } from "react-router-dom";
+
 const TradeSucessSection = () => {
   return (
     <section className="relative md:py-24 py-16">
