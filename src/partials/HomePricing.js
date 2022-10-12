@@ -6,7 +6,7 @@ const HomePricing = () => {
   return (
     <div className="py-6">
       <Container>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-24">
           <h3 className="mb-6 md:text-3xl text-2xl leading-normal font-bold text-center max-w-[42rem]">
             Get The Account Size Required To Become A Successful Trader
           </h3>
@@ -16,7 +16,7 @@ const HomePricing = () => {
           </p>
         </div>
         <section class="py-1 bg-blueGray-50">
-          <div class="w-full mb-12 xl:mb-0 px-4 mx-auto mt-24">
+          <div class="w-full mb-12 xl:mb-0 px-4 mx-auto ">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-[6px_7px_0px_#1d4353] border border-solid border-blueGray-100 rounded ">
               <div class="rounded-t mb-0 px-4 py-3 border-0">
                 <div class="flex flex-wrap items-center">
