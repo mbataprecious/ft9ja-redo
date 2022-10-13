@@ -1,86 +1,45 @@
-export const linkArray = [
-  {
-    title: "About Us",
-    url: "/#about",
-  },
-  {
-    title: "Contat Us",
-    url: "https://t.me/PipsvilleCrypto_support",
-  },
-  {
-    title: "FAQs",
-    url: "/#faq",
-  },
-  {
-    title: "Investments",
-    url: "/investments",
-  },
-];
-export const subHead = [
-  {
-    title: "Save Money",
-    details:
-      "We deliver a broad array of asset financing skills and provide support for our Client’s needs whether they are looking for asset structured financing or asset backed finance.",
-    img: "/icons/Save.svg",
-  },
-  {
-    title: "Save Time",
-    details:
-      "In an increasingly complex world, we help intricate systems function, adapt and evolve so they can benefit and grow wealth",
-    img: "/icons/Layers.svg",
-  },
-  {
-    title: "Secure",
-    details:
-      "A team of world-class executives, chosen for their experience and ability to connect emerging markets with developed markets for the benefit of our clients.",
-    img: "/icons/Award.svg",
-  },
-];
-
 export const testimonies = [
   {
     id: 1,
-    name: "Jane Cooper",
-    title: "sure and secure",
+    name: "Promise",
+    title: "FTMO alternative for Nigerian online Traders",
     testimony:
-      "pipsville has been one of my reliable source of income having a very flexible investment plans, you sure can go wrong.",
-    position: "Foex trader",
-    img: "/img/face.jpg",
+      "There isn’t a brand like this in Nigeria presently that I know of. I know a couple of European prop firm but Ft9ja’s service is innovative, flexible, and more suitable for Naija Traders. Trust me, they are going blow soon. The only issue is their customer service; they don’t respond on time on weekends. Enjoying trading for them currently, prompt payments…would recommend them anytime and any day",
+    position: "Lagos,Nigeria",
   },
   {
     id: 2,
-    name: "moris john",
-    title: "Flexible and easy payment",
-    testimony: "this is the best thus far, i have ever seen.",
-    position: "content Writer",
-    img: "/img/face2.jpg",
+    name: "Benjamin",
+    title: "My referral commission paid within hours!",
+    testimony:
+      "I own a trading academy with over 100 students. My students started asking me about ft9ja. I made my own findings, got an account with them and discovered they are legit. I joined their referral program where they pay 10% referral commission. I’m amazed at how quickly they pay directly into my bank account. I request for payment any time and they pay within hours",
+    position: "Uyo,Nigeria",
   },
   {
     id: 3,
-    name: "dave montez",
-    title: "Thanks pipsville",
+    name: "Adamu",
+    title: "Consistent Guys",
     testimony:
-      "i thought this was not real at first, but now this is the best platform to be in.",
-    position: "student",
-    img: "/img/face4.png",
+      " Me and my guys thought the prop firm model can’t work in Nigeria. But FT9ja has proved us wrong by being consistent and transparent. A team of bold and hardworking guys.Trading naija will never be the same again!",
+    position: "Abuja,Nigeria",
   },
-  {
-    id: 4,
-    name: "kelvine",
-    title: "Amazing support",
-    testimony:
-      "very helpful support team. Alway ready answer to all your needs. Pipsville support is the best",
-    position: "financial analyst",
-    img: "/img/face5.png",
-  },
-  {
-    id: 5,
-    name: "luis ralp",
-    title: "Nice Bonus packages",
-    testimony: "the referal and investment bonus are real! wow..so cool.",
-    position: "blogger",
-    img: "/img/face3.jpg",
-  },
+  // {
+  //   id: 4,
+  //   name: "kelvine",
+  //   title: "Amazing support",
+  //   testimony:
+  //     "very helpful support team. Alway ready answer to all your needs. Pipsville support is the best",
+  //   position: "financial analyst",
+  //   img: "/img/face5.png",
+  // },
+  // {
+  //   id: 5,
+  //   name: "luis ralp",
+  //   title: "Nice Bonus packages",
+  //   testimony: "the referal and investment bonus are real! wow..so cool.",
+  //   position: "blogger",
+  //   img: "/img/face3.jpg",
+  // },
 ];
 
 export const FAQs = [
