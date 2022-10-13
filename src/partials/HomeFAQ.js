@@ -2,7 +2,6 @@ import React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
 import { BiChevronDown } from "react-icons/bi";
 import { styled } from "@mui/material/styles";
 import { FAQs } from "../utils/landingUtils";
@@ -55,16 +54,18 @@ function HomeFAQ() {
               onChange={handleChange(`panel${index}`)}
             >
               <AccordionSummary
-                className="!py-4"
+                className="!py-4 text-white"
                 expandIcon={<BiChevronDown className="text-white" />}
                 aria-controls="panel1bh-content"
                 id="panel1bh-header"
               >
                 <h6 className="text-[#ffffff] opacity-90">{title}</h6>
+                <p className=" font-poppins text-lg font-semibold hidden"></p>
+                <ul className="pl-4 list-disc hidden"></ul>
               </AccordionSummary>
-              <AccordionDetails>
-                <Typography color={"#ffffff"}>{answer}</Typography>
-              </AccordionDetails>
+              <AccordionDetails
+                dangerouslySetInnerHTML={{ __html: answer }}
+              ></AccordionDetails>
             </CustomizedAccordion>
           ))}
         </div>

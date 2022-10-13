@@ -85,51 +85,74 @@ export const testimonies = [
 
 export const FAQs = [
   {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    title: "How does this work?",
+    answer: `<p class=" font-poppins text-lg font-semibold">
+      STEP 1: Sign up at FT9ja.com
+    </p>
+    <ul class="pl-4 list-disc">
+      <li>
+        We provide 3 Account Sizes for Traders to start with: $3,000
+        (N2,100,000), $5,000 (N3,500,000), and $25,000
+        (N17,500,000).
+      </li>
+      <li>
+        Pay the one-time fee, and you’ll receive the login details
+        to the Broker's server on the MT4/MT5 platform within 24
+        hours of purchase
+      </li>
+      <li>
+        This account, the ZumaRock Account, is the account you’ll
+        begin trading with.
+      </li>
+    </ul>`,
   },
   {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+    title: "What are the rules?",
+    answer: `<ul class="pl-4 list-disc">
+      <li>Maximum Daily Drawdown limit: 5%.</li>
+      <li>Account DrawDown Limit: 10%. </li>
+      <li>Minimum Trading Days: 2 days a week and 10 days a month. </li>
+      <ul>`,
+  },
+
+  {
+    title: "What is the zuma account?",
     answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "Every Trader starts with a ZumaRock Account. ZumaRock Accounts are the gateway to AsoRock Accounts. Although ZumaRock Accounts are demo accounts, you still get paid 5% weekly or 10% monthly on the profit you make! That's the Talent Bonus.",
   },
   {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    title: "What is the Aso Account?",
+    answer: `<ul class="pl-4 list-disc">
+      <li>Aso Accounts are live accounts successful 
+      Zuma Account Traders are eligible for by positively 
+      growing their accounts to 25% over time (no time limits). 
+      Aso Account Traders are FT9ja Traders! They are Traders that have proven to be in the
+       league of the best Traders in Nigeria. Aso Account Traders get paid up to 80% of the profit.</li>
+      <li>Account can be compounded to 2X of the original Account Size. For example, a $25,000 account can be compounded to up to $50,000. </li>
+      <ul>`,
   },
   {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    title: "Will I be responsible for losses? ",
+    answer: "No! We cover the losses.",
   },
   {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    title: "Is this an investment offer?",
+    answer: `<ul class="pl-4 list-disc">
+    <li>No. You are not “investing” any money into our company or into any trading account.</li>
+    <li>At FT9ja, we invest our funds into talented, profitable, and reliable Traders. We discover our AsoRock Traders by onboarding them through ZumaRock Account 
+    which is a simulated/demo trading account. Traders get paid even during the onboarding period!</li>
+    <ul>`,
   },
   {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    title: "Are you a Broker? ",
+    answer: `
+    <ul class="pl-4 list-disc">
+    <li>No, we are not.</li>
+    <li>We have accounts with third-party Brokers which we give our Traders access to.</li>
+    <ul>`,
   },
   {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-  },
-  {
-    title:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-    answer:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    title: " Which Brokers do you offer? ",
+    answer: "You can choose between IC Markets, FXTM, and Deriv.",
   },
 ];

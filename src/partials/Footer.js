@@ -127,10 +127,10 @@ const Footer = () => {
                     (Appointments only)
                   </a>
                   <br />
-                  Abuja: 18, Queen Elizabeth Street, Asokoro
+                  Lagos: 362 Herbert Macaulay Way, Yaba
                   <br />
                   <a
-                    href="https://calendly.com/ft9ja/"
+                    href="https://calendly.com/ft9ja-lagos"
                     className="hover:underline"
                     target={"_blank"}
                   >
