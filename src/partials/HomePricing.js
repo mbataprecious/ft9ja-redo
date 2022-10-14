@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Container from "../components/Container";
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const HomePricing = () => {
+  const theme = useTheme();
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
   const [priceSummary, setPriceSummary] = useState([
     {
       title: "profit Split",
@@ -59,6 +64,12 @@ const HomePricing = () => {
       details: `Bad network? ‘down NEPA’? stuck in traffic and can’t place that trade? We can relate. If you blow your first Zuma Account, just request for a Second Chance Account. It’s FREE.`,
     },
   ]);
+  const [prices, setPrices] = useState([
+    "$3,000 (N2.1M)",
+    "$5,000 (N3.5M)",
+    "$25,000 (N17.5M)",
+  ]);
+  console.log({ matches });
 
   const handleClick = (index) => {
     const newPriceSummary = [...priceSummary];
@@ -68,6 +79,17 @@ const HomePricing = () => {
       opened: !openedSummary.opened,
     };
     setPriceSummary(newPriceSummary);
+  };
+
+  const handleIdxNextChange = () => {
+    if (currentIdx < prices.length - 1) {
+      setCurrentIdx((idx) => idx + 1);
+    }
+  };
+  const handleIdxPrevChange = () => {
+    if (currentIdx > 0) {
+      setCurrentIdx((idx) => idx - 1);
+    }
   };
 
   return (
@@ -96,20 +118,43 @@ const HomePricing = () => {
               </div>
 
               <div className="block w-full overflow-x-auto">
-                <table className="items-center bg-transparent border-collapse w-full">
+                <table className="items-center bg-transparent border-collapse w-full overflow-hidden">
                   <thead>
                     <tr>
                       {" "}
                       <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-6 uppercase border-l-0 border-r-0   font-bold text-left bg-[#4b45b4]"></th>
-                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-6 uppercase border-l-0 border-r-0   font-bold text-left">
-                        $3,000 (N2.1M)
-                      </th>
-                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-6 uppercase border-l-0 border-r-0   font-bold text-left">
-                        $5,000 (N3.5M)
-                      </th>
-                      <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-6 uppercase border-l-0 border-r-0   font-bold text-left">
-                        $25,000 (N17.5M)
-                      </th>
+                      {matches &&
+                        prices.map((price) => (
+                          <th
+                            key={price}
+                            className="relative px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-6 uppercase border-l-0 border-r-0  whitespace-nowrap font-bold text-center"
+                          >
+                            {price}
+                          </th>
+                        ))}
+                      {!matches && (
+                        <th className="relative px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-6 uppercase border-l-0 border-r-0  whitespace-nowrap font-bold text-center">
+                          {currentIdx > 0 && (
+                            <button
+                              onClick={handleIdxPrevChange}
+                              className=" absolute border-2 border-gray-400 bg-white rounded-full h-10 w-10 left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10"
+                            >
+                              <BiChevronLeft className="text-[#1d4353] m-auto h-8 w-8 " />
+                            </button>
+                          )}
+                          {currentIdx < prices.length - 1 && (
+                            <button
+                              onClick={handleIdxNextChange}
+                              className=" absolute border-2 border-gray-400 bg-white rounded-full h-10 w-10 right-0  top-1/2 -translate-y-1/2 z-10"
+                            >
+                              <BiChevronRight className="text-[#1d4353] m-auto h-8 w-8 " />
+                            </button>
+                          )}
+                          {prices[currentIdx]
+                            ? prices[currentIdx]
+                            : prices[prices.length - 1]}
+                        </th>
+                      )}
                     </tr>
                   </thead>
 
@@ -121,33 +166,42 @@ const HomePricing = () => {
                             className=" cursor-pointer"
                             onClick={() => handleClick(index)}
                           >
-                            <th className="flex items-center border border-t-0 px-6 align-middle border-l-0 border-r-0   p-4 text-left bg-[#4b45b4] overflow-hidden text-white">
+                            <td className="relative pl-6 border border-t-0 px-6 align-middle border-l-0 border-r-0 p-4 text-left bg-[#4b45b4] font-bold h-full text-white">
                               {details && (
-                                <span>
-                                  <BiChevronDown
-                                    height={32}
-                                    width={32}
-                                    className="mr-3"
-                                  />
-                                </span>
-                              )}
+                                <BiChevronDown
+                                  height={32}
+                                  width={32}
+                                  className="absolute top-1/2 -translate-y-1/2 left-2"
+                                />
+                              )}{" "}
                               {title}
-                            </th>
-                            {features.map((feature) => (
+                            </td>
+                            {matches ? (
+                              features.map((feature) => (
+                                <td
+                                  key={feature}
+                                  colSpan={3 / features.length}
+                                  className="border-t-0 px-6 align-middle border border-l-0 text-center border-r-0   p-4"
+                                >
+                                  {feature}
+                                </td>
+                              ))
+                            ) : (
                               <td
-                                key={feature}
-                                colSpan={3 / features.length}
+                                colSpan={1}
                                 className="border-t-0 px-6 align-middle border border-l-0 text-center border-r-0   p-4"
                               >
-                                {feature}
+                                {features[currentIdx]
+                                  ? features[currentIdx]
+                                  : features[features.length - 1]}
                               </td>
-                            ))}
+                            )}
                           </tr>
                           {opened && details && (
                             <tr>
                               <td
                                 colSpan={4}
-                                className="border-t-0 px-6 bg-gray-200 border border-l-0 border-r-0   p-4"
+                                className="border-t-0 px-6 bg-gray-100 border border-l-0 border-r-0   p-4"
                               >
                                 {details}
                               </td>

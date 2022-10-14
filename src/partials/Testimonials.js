@@ -5,6 +5,7 @@ import { Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/scss";
 import "swiper/scss/pagination";
+import "../css/additional-styles/swiper-pagination.scss";
 // import required modules
 import { Pagination } from "swiper";
 import Testimony from "../components/Testimony";
